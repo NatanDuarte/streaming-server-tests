@@ -5,9 +5,10 @@ const app = express();
 app.use(express.urlencoded());
 
 app.post('/auth', (req, res) => {
+    console.log(req.body);
     const streamKey = req.body.key;
 
-    if (streamKey == 'my_stream_key') {
+    if (streamKey === 'my_stream_key') {
         res.status(200).send();
         return;
     }
