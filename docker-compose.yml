@@ -12,3 +12,9 @@ services:
   auth:
     build: ./auth
     container_name: auth_server
+
+  client:
+      build: ./client
+      container_name: client
+      ports:
+        - "3000:3000"
